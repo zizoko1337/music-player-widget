@@ -19,6 +19,11 @@
         <div class="time-passed" :style="{width: time + '%'}"></div>
         <input id="slider" type="range" min="0" max="100" v-model='time'>
     </div>
+    <div class="buttons-container">
+        <div class="player-btn"><i class="fas fa-step-backward"></i></div>
+        <div class="player-btn-lg"><i class="fas fa-exchange-alt"></i></div>
+        <div class="player-btn"><i class="fas fa-step-forward"></i></div>
+    </div>
 
   </div>
 </template>
@@ -54,12 +59,12 @@ export default {
     border-radius: 2rem 2rem 0 0;
     height: 55vh;
 }
-.image-container img{
+.image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.image-container .img-icons{
+.image-container .img-icons {
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -70,14 +75,14 @@ export default {
     height: 20%;
     background: linear-gradient(90deg, rgba(36,0,38,0.7371323529411764) 0%, rgba(0,0,0,0.3309698879551821) 50%, rgba(45,0,48,0.6923144257703081) 100%);
 }
-.img-icons .player-arrows{
+.img-icons .player-arrows {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
     margin: 1rem;
     color: white;
 }
-.image-container .img-nav{
+.image-container .img-nav {
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -86,7 +91,7 @@ export default {
     width: 100%;
     height: 20%;
 }
-.img-nav .player-navigation{
+.img-nav .player-navigation {
     display: flex;
     align-items: center;
     right: 0;
@@ -97,7 +102,7 @@ export default {
     color: rgba(255, 255, 255, 0.49);
 }
 
-.image-container .img-foot{
+.image-container .img-foot {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -121,12 +126,12 @@ export default {
     font-size: 1.2rem;
 }
 
-/* navigation */
+/* time slider */
 
 #timing-belt {
     position: relative;
     padding: 0;
-    height: 0.8rem;
+    height: 1rem;
     background-color: rgb(218, 80, 72);
 }
 #slider {
@@ -139,7 +144,7 @@ export default {
     border-radius: 0;
     background-color: rgba(218, 79, 72, 0);
 }
-#slider::-webkit-slider-thumb{
+#slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     display: flex;
     align-content: center;
@@ -163,6 +168,44 @@ export default {
     outline: none;
     border-radius: 0;
     background-color: rgb(255, 255, 255);
+}
+
+/* buttons */
+
+.buttons-container {
+    background-color: rgba(127, 255, 212, 0);
+    position: relative;
+    border-radius: 0 0 2rem 2rem;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.player-btn {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 2rem;
+    height: 2rem;
+    width: 2rem;
+}
+.player-btn-lg {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: blueviolet;
+    border-style: solid;
+    border-width: 0.4rem;
+    border-radius: 2rem;
+    height: 3rem;
+    width: 3rem;
 }
 
 </style>
