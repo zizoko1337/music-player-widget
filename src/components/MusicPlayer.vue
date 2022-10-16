@@ -7,7 +7,7 @@
             <i class="player-arrows fas fa-redo-alt"></i>
         </div>
         <div class="img-nav">
-            <i class="player-navigation fas fa-bars"></i>
+            <i class="player-navigation fas fa-bars" @click="test()"></i>
         </div>
         <div class="img-foot">
             <p class="song-artist">Icona Pop</p>
@@ -40,6 +40,11 @@ export default {
     return {
         time: 60,
     }
+  },
+  methods: {
+    test(){
+        console.log('test')
+    }
   }
 }
 </script>
@@ -47,6 +52,7 @@ export default {
 <style scoped>
 
 /* media frame */
+
 .multimedia-frame {
     margin: 2rem 1rem;
     background-color: rgb(243, 232, 241);
@@ -207,7 +213,7 @@ export default {
     background-color: rgb(55, 26, 123);
     border-style: solid;
     border-width: 0.4rem;
-    border-radius: 2rem;
+    border-radius: 100%;
     height: 3rem;
     width: 3rem;
 }
