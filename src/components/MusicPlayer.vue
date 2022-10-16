@@ -52,6 +52,9 @@ export default {
     background-color: rgb(243, 232, 241);
     height: 80vh;
     border-radius: 2rem;
+    -webkit-box-shadow: 0px 14px 22px 4px rgba(106, 2, 125, 0.8);
+    -moz-box-shadow: 0px 14px 22px 4px rgba(106, 2, 125, 0.8);
+    box-shadow: 0px 14px 22px 4px rgba(106, 2, 125, 0.8);
 }
 .image-container {
     position: relative;
