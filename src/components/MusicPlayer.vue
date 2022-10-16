@@ -20,11 +20,12 @@
         <input id="slider" type="range" min="0" max="100" v-model='time'>
     </div>
     <div class="buttons-container">
-        <div class="player-btn"><i class="fas fa-step-backward"></i></div>
-        <div class="player-btn-lg"><i class="fas fa-exchange-alt"></i></div>
-        <div class="player-btn"><i class="fas fa-step-forward"></i></div>
+        <div class="share-btn"><i class="player-btn-side-icons fas fa-share-alt"></i></div>
+        <div class="player-btn"><i class="player-btn-icons fas fa-step-backward"></i></div>
+        <div class="player-btn-lg"><i class="player-btn-pause far fa-pause-circle"></i></div>
+        <div class="player-btn"><i class="player-btn-icons fas fa-step-forward"></i></div>
+        <div class="fav-btn"><i class="player-btn-side-icons fas fa-heart"></i></div>
     </div>
-
   </div>
 </template>
 
@@ -177,7 +178,7 @@ export default {
     position: relative;
     border-radius: 0 0 2rem 2rem;
     width: 100%;
-    height: 30%;
+    height: 28%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -190,7 +191,7 @@ export default {
     display: flex;
     align-items: center;
     color: white;
-    background-color: blueviolet;
+    background-color: rgb(55, 26, 123);
     border-radius: 2rem;
     height: 2rem;
     width: 2rem;
@@ -200,12 +201,52 @@ export default {
     display: flex;
     align-items: center;
     color: white;
-    background-color: blueviolet;
+    background-color: rgb(55, 26, 123);
     border-style: solid;
     border-width: 0.4rem;
     border-radius: 2rem;
     height: 3rem;
     width: 3rem;
 }
+.player-btn-icons {
+    position: absolute;
+    font-size: 1rem;
+    color: white;
+    transform: translate(63%);
+}
+.player-btn-pause {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    transform: translate(25%);
+}
+.share-btn {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: rgb(55, 26, 123);
+    background-color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1.5rem;
+}
+.fav-btn {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: rgb(55, 26, 123);
+    background-color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    height: 2rem;
+    width: 2rem;
+    margin-left: 1.5rem;
+}
+.player-btn-side-icons {
+    position: absolute;
+    font-size: 1rem;
+    transform: translate(50%);
+}
+
 
 </style>
