@@ -1,7 +1,7 @@
 # music-player-widget
 
 ## Project setup
-```
+``` 
 npm install
 ```
 
